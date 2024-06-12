@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather Api</title>
+    <!-- ================================================================ -->
+    <!-- Favicon  -->
+    <link rel="icon" type="image/x-icon" href="image/weather-app.png" />
+    <!-- font awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- ================================================================ -->
+  </head>
+
+  <body>
+    <main>
+      <footer>
+        <nav class="navbar navbar-expand-lg ag-bg-blue p-4">
+          <div class="container">
+            <a class="navbar-brand" href="#"
+              ><img src="image/logo.png" class="img-fluid" alt="" />
+              <span class="ms-2 mt-5 text-white fw-bold">weather</span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item px-3">
+                  <a
+                    class="nav-link active text-white px-4 py-1 ag-bg-blue2"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item nav-itemHover px-3">
+                  <a class="nav-link text-white py-1" href="#">News</a>
+                </li>
+                <li class="nav-item nav-itemHover px-3">
+                  <a
+                    class="nav-link text-white py-1"
+                    aria-current="page"
+                    href="#"
+                    >Live cameras</a
+                  >
+                </li>
+                <li class="nav-item nav-itemHover px-3">
+                  <a
+                    class="nav-link text-white py-1"
+                    aria-current="page"
+                    href="#"
+                    >Photos</a
+                  >
+                </li>
+                <li class="nav-item nav-itemHover px-3">
+                  <a
+                    class="nav-link text-white py-1"
+                    aria-current="page"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </footer>
+      <section class="weatherHeader">
+        <div class="container py-5">
+          <form class="find-location position-relative">
+            <input
+              type="text"
+              placeholder="Find your location..."
+              id="search"
+              class="form-control ag-bg-blue text-white border-0 py-3 rounded-5 px-4"
+            />
+            <input
+              type="button"
+              value="Find"
+              id="submit"
+              class="btn btn-primary rounded-5 px-5 py-2"
+            />
+          </form>
+          <div class="row ">
+            <!-- first Day -->
+            <div class="col-md-4">
+              <div class="Tableweather py-5">
+                <div class="card" style="width: 25rem">
+                  <div
+                    class="card-footer text-center ag-bg-blue-footer text-white d-flex justify-content-around"
+                  >
+                    <div class="day">Tuesday</div>
+                    <div class="data">Data</div>
+                  </div>
+                  <div class="card-body ag-bg-blue-body border-0 p-4 py-5">
+                    <h5
+                      class="card-title text-white text-center locationa"
+                      id="city"
+                    >
+                      Cairo
+                    </h5>
+                    <div
+                      class="inner d-flex justify-content-between align-items-center"
+                    >
+                      <p class="card-text ag-fs-90 text-white fw-bolder degree">
+                        oC
+                      </p>
+                      <div class="iconDegree">
+                        <img alt="" id="today-icon" />
+                      </div>
+                    </div>
+                    <span class="ag-bg-blue2 d-block text-center textDegree "
+                      >Sunny</span
+                    >
+                    <div class="details mt-3 text-center mb-2">
+                      <i class="fas fa-umbrella pr-1 text-white"></i>
+                      <span id="humidty" class="text-white"></span>
+                      <span class="text-white me-2">%</span>
+
+                      <i class="fas fa-wind pl-3 pr-1 text-white"></i>
+                      <span id="wind" class="text-white"></span>
+                      <span class="text-white me-2">km/h</span>
+
+                      <i class="far fa-compass pl-3 pr-1 text-white"></i>
+                      <span id="compass" class="text-white"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Next Day -->
+            <div class="col-md-4">
+              <div class="Tableweather py-5">
+                <div class="card" style="width: 25rem">
+                  <div
+                    class="card-footer text-center ag-bg-blue-footer text-white nextDay"
+                  >
+                    Wednesday
+                  </div>
+                  <!--  -->
+                  <div class="card-body ag-bg-blue3 border-0 p-4 py-5 ">
+                    <div class="text-center">
+                      <img alt="" class="NextIconn" />
+                    </div>
+                    <div class="inner">
+                      <p
+                        class="card-text fs-1 text-center text-white fw-bolder maxDegree"
+                      ></p>
+                      <p
+                        class="card-text fs-5 text-center text-white fw-bolder minDegree"
+                      ></p>
+                    </div>
+                    <span class="ag-bg-blue2 d-block text-center NextTextDegree mb-5"
+                      >Sunny</span
+                    >
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Next Day -->
+            <div class="col-md-4">
+              <div class="Tableweather py-5">
+                <div class="card" style="width: 25rem">
+                  <div
+                    class="card-footer text-center ag-bg-blue-footer text-white nextDay"
+                  >
+                    Wednesday
+                  </div>
+                  <!--  -->
+                  <div class="card-body ag-bg-blue-body border-0 p-4 py-5 ">
+                    <div class="text-center">
+                      <img alt="" class="NextIconn" />
+                    </div>
+                    <div class="inner">
+                      <p
+                        class="card-text fs-1 text-center text-white fw-bolder maxDegree"
+                      ></p>
+                      <p
+                        class="card-text fs-5 text-center text-white fw-bolder minDegree"
+                      ></p>
+                    </div>
+                    <span class="ag-bg-blue2 d-block text-center NextTextDegree mb-5"
+                      >Sunny</span
+                    >
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 py-5 mt-3">
+              <form class="find-location position-relative">
+                <input
+                  type="text"
+                  placeholder="Enter your email to subscribe..."
+                  id="search"
+                  class="form-control ag-bg-blue text-white border-0 py-3 rounded-5 px-4"
+                />
+                <input
+                  type="button"
+                  value="Subscribe"
+                  id="submit"
+                  class="btn btn-primary rounded-5 px-5 py-2"
+                />
+              </form>
+            </div>
+            <div class="col-md-4 py-5 mt-3">
+              <div
+                class="social-links d-flex justify-content-center align-items-center m-0"
+              >
+                <a href="#"><i class="fa-brands fa-facebook fs-2 ms-4"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fs-2 ms-4"></i></a>
+                <a href="#"
+                  ><i class="fa-brands fa-google-plus fs-2 ms-4"></i
+                ></a>
+                <a href="#"><i class="fa-brands fa-pinterest fs-2 ms-4"></i></a>
+              </div>
+            </div>
+            <p class="text-secondary">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- ================================================================ -->
+    <!--bootstrap  -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- ================================================================ -->
+  </body>
+</html>
